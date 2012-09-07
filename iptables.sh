@@ -196,10 +196,10 @@ start() {
     ###########################################################
     # $DENY_HOSTSからのアクセスは破棄
     ###########################################################
-    for host in ${DENY_HOSTS[@]}
+    for deny_host in ${DENY_HOSTS[@]}
     do
-        iptables -A INPUT -s $ip -m limit --limit 1/s -j LOG --log-prefix "deny_host: "
-        iptables -A INPUT -s $ip -j DROP
+        iptables -A INPUT -s $deny_host -m limit --limit 1/s -j LOG --log-prefix "deny_host: "
+        iptables -A INPUT -s $deny_host -j DROP
     done
 
     # 攻撃対策
