@@ -1,7 +1,9 @@
 iptables for Ubuntu
 ========
 
-iptables for Ubuntu OS.
+iptables for Ubuntu OS. Imspired from "俺史上最強の iptables をさらす"
+
+http://qiita.com/items/5c4e21fa284497782f71
 
 How to use
 ----
